@@ -33,7 +33,7 @@
 		$gridClass .= ' grid-list--normal';
 	}
 
-	if (!$arParams['ITEMS_OFFSET']) {
+	if ($arParams['ITEMS_OFFSET']) {
 		$gridClass .= ' grid-list--no-gap';
 	}
 	if ($arParams['NO_GRID']) {
@@ -142,11 +142,11 @@
 				?>
 
 				<div class="blog-list__wrapper <?=$itemWrapperClasses;?> <?=$itemWrapperClassesExt;?>">
-					<div class="blog-list__item <?=$itemClasses?> <?=($arItem['DISPLAY_PROPERTIES']['SALE_NUMBER']['VALUE'] || $bDiscountCounter ? 'blog-list__item--with-discount' : '');?>" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+					<div class="blog-list__item <?=$itemClasses?> bordered rounded-4 shadow-hovered shadow-no-border-hovered <?=($arItem['DISPLAY_PROPERTIES']['SALE_NUMBER']['VALUE'] || $bDiscountCounter ? 'blog-list__item--with-discount' : '');?>" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 						<?if($imageSrc):?>
-							<div class="blog-list__item-image-wrapper <?='blog-list__item-image-wrapper--'.$arParams['IMAGE_POSITION']?>">
+							<div class="blog-list__item-image-wrapper blog-list__item-image-wrapper--TOP">
 								<a class="blog-list__item-link" href="<?=$arItem['DETAIL_PAGE_URL']?>">
-									<span class="blog-list__item-image<?=($arParams['ROUNDED_IMAGE'] ? ' rounded' : '');?><?=$imageClasses?>" style="background-image: url(<?=$imageSrc?>);"></span>
+									<span class="blog-list__item-image<?=($arParams['ROUNDED_IMAGE'] ? ' rounded' : '');?><?/*=$imageClasses*/?> blog-list__item-image--absolute" style="background-image: url(<?=$imageSrc?>);"></span>
 								</a>
 								
 							</div>
@@ -156,7 +156,7 @@
 							<a class="blog-list__item-link blog-list__item-link--absolute" href="<?=$arItem['DETAIL_PAGE_URL']?>"></a>
 						<?endif;?>
 
-						<div class="blog-list__item-text-wrapper <?='blog-list__item-text-wrapper--'.$arParams['TEXT_POSITION']?> flex-grow-1 flexbox">
+						<div class="blog-list__item-text-wrapper blog-list__item-text-wrapper--BOTTOM_RELATIVE flex-grow-1 flexbox">
 							<?if($bShowSection):?>
 								<div class="blog-list__item-sticker blog-list__item-sticker--normal sticker">
 									<div class="sticker__item font_12 sticker__item--bordered<?=($bFonImg ? ' sticker__item--fon' : '');?>"><?=$arResult['SECTIONS'][$arItem['IBLOCK_SECTION_ID']]['NAME'];?></div>
