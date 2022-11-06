@@ -1,2 +1,2 @@
 # opalubka
-tasks for opalubka website
+tasks for opalubka.dev website
