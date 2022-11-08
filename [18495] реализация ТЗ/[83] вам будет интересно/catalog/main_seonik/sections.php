@@ -98,21 +98,20 @@ $APPLICATION->SetPageProperty('MENU', 'N');
 			false,
 			["UF_ARTICLES_IN_CATALOG"],
 		   );
-			while($arSelectedArticles = $rsSelectedItems->GetNext()){
+
 				$arSelectedIDs = $arSelectedArticles["UF_ARTICLES_IN_CATALOG"];
-				/*print_r($arSelectedIDs);*/
+
 
 
 			if(!empty($arSelectedIDs)){
 				print_r($arSelectedIDs);
 				$GLOBALS["arArticlesByFilter"] = array("ID"=>$arSelectedIDs);
 		?>
-			<h2>Вам будет интересно:</h2>
 
 		<? } /*end if*/ ?>
-		<? } /*end while*/?>
 
-		<?
+
+		<? 
 
 		$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
@@ -178,7 +177,7 @@ $APPLICATION->SetPageProperty('MENU', 'N');
 				"USE_FILTER" => "Y"
 			)
 		);?>
-		<? // end Блок "Вам будет интересно" ?>
+		<? // end Блок "Вам будет интересно" ?> 
 	</div>
 	<?if($bShowLeftBlock):?>
 		<?CAllcorp3::ShowPageType('left_block');?>
