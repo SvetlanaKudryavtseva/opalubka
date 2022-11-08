@@ -52,6 +52,7 @@
 		$gridClass .= ' grid-list--items-'.$arParams['ELEMENTS_ROW'];
 	}
 
+
 	$itemWrapperClasses = ' grid-list__item';
 	if (!$arParams['ITEMS_OFFSET'] && $arParams['BORDER']) {
 		$itemWrapperClasses .= ' grid-list-border-outer';
@@ -108,7 +109,7 @@
 			<?endif;?>
 		<?endif;?>
 
-	
+	<h2><?=$arParams['TITLE']; ?></h2>
 		<div class="<?=$gridClass?>">
 	<?endif;?>
 			<?
@@ -241,7 +242,7 @@
 			<?endif;?>
 		<?endif;?>
 		
-		
+
 	</div>
 	<?endif;?>
 <?endif;?>
