@@ -115,6 +115,9 @@ $containerName = 'catalog-products-viewed-container';
 ?>
 
 <div class="catalog-products-viewed bx-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>">
+	<div class="inner-block__title-wrapper">
+		<div class="inner-block__part--left"><h2><?=$arParams['TITLE'];?></h2></div>
+	</div>
 	<?
 	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
 	{
