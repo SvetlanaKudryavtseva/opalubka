@@ -20,6 +20,7 @@ if (ModuleManager::isModuleInstalled('bitrix.eshop'))
 	$arThemes['site'] = GetMessage('CP_CPV_TPL_THEME_SITE');
 }
 
+
 $arThemesList = array(
 	'blue' => GetMessage('CP_CPV_TPL_THEME_BLUE'),
 	'green' => GetMessage('CP_CPV_TPL_THEME_GREEN'),
@@ -427,6 +428,12 @@ $arTemplateParameters['SHOW_CLOSE_POPUP'] = array(
 	'NAME' => GetMessage('CP_CPV_TPL_SHOW_CLOSE_POPUP'),
 	'TYPE' => 'CHECKBOX',
 	'DEFAULT' => 'N',
+);
+$arTemplateParameters['MESS_SHOW_TITLE'] = array(
+	'PARENT' => 'VISUAL',
+	'NAME' => GetMessage('CP_CPV_TPL_MESS_SHOW_TITLE'),
+	'TYPE' => 'STRING',
+	'DEFAULT' => GetMessage('CP_CPV_TPL_MESS_SHOW_TITLE_DEFAULT')
 );
 $arTemplateParameters['MESS_BTN_BUY'] = array(
 	'PARENT' => 'VISUAL',

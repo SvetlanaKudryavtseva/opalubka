@@ -60,6 +60,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 	}
 }
 
+$arParams['~MESS_SHOW_TITLE'] = $arParams['~MESS_SHOW_TITLE'] ?: Loc::getMessage('CT_CPV_TPL_MESS_SHOW_TITLE');
+
 $arParams['~MESS_BTN_BUY'] = $arParams['~MESS_BTN_BUY'] ?: Loc::getMessage('CT_CPV_TPL_MESS_BTN_BUY');
 $arParams['~MESS_BTN_DETAIL'] = $arParams['~MESS_BTN_DETAIL'] ?: Loc::getMessage('CT_CPV_TPL_MESS_BTN_DETAIL');
 $arParams['~MESS_BTN_COMPARE'] = $arParams['~MESS_BTN_COMPARE'] ?: Loc::getMessage('CT_CPV_TPL_MESS_BTN_COMPARE');
@@ -107,7 +109,8 @@ $generalParams = array(
 	'MESS_BTN_COMPARE' => $arParams['~MESS_BTN_COMPARE'],
 	'MESS_BTN_SUBSCRIBE' => $arParams['~MESS_BTN_SUBSCRIBE'],
 	'MESS_BTN_ADD_TO_BASKET' => $arParams['~MESS_BTN_ADD_TO_BASKET'],
-	'MESS_NOT_AVAILABLE' => $arParams['~MESS_NOT_AVAILABLE']
+	'MESS_NOT_AVAILABLE' => $arParams['~MESS_NOT_AVAILABLE'],
+	'MESS_SHOW_TITLE' => $arParams['~MESS_SHOW_TITLE'],
 );
 
 $obName = 'ob'.preg_replace('/[^a-zA-Z0-9_]/', 'x', $this->GetEditAreaId($this->randString()));
@@ -116,7 +119,7 @@ $containerName = 'catalog-products-viewed-container';
 
 <div class="catalog-products-viewed bx-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>">
 	<div class="inner-block__title-wrapper">
-		<div class="inner-block__part--left"><h2><?=$arParams['TITLE'];?></h2></div>
+		<div class="inner-block__part--left"><h2><?=$arParams['~MESS_SHOW_TITLE'];?></h2></div>
 	</div>
 	<?
 	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
