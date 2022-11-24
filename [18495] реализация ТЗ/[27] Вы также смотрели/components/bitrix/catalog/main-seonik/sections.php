@@ -84,110 +84,105 @@ $APPLICATION->SetPageProperty('MENU', 'N');
 				);?>
 			</div>
 		<?endif;?>
-<?unset($html);?>
+		<?unset($html);?>
+		<?// Блок производителей на главной странице каталога ?>
 		<div class="catalog__block">
-			<?/* Блок производителей на главной странице каталога */?>
-
 			<?if($APPLICATION->GetCurPage() == "/catalog/") {?>
-
 			<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"brands-list-seonik", 
-	array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "N",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => "brands-list-seonik",
-		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "N",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "NAME",
-			1 => "PREVIEW_TEXT",
-			2 => "PREVIEW_PICTURE",
-			3 => "",
-		),
-		"FILTER_NAME" => "arRegionLinkFront",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "27",
-		"IBLOCK_TYPE" => "-",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"ITEMS_OFFSET" => "N",
-		"MEDIA_PROPERTY" => "",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "10",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "Y",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"RIGHT_LINK" => "/company/brands/",
-		"RIGHT_TITLE" => "Все производители",
-		"SEARCH_PAGE" => "/search/",
-		"SET_BROWSER_TITLE" => "N",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "N",
-		"SET_META_KEYWORDS" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"SHOW_DETAIL_LINK" => "Y",
-		"SHOW_PREVIEW_TEXT" => "Y",
-		"SHOW_SECTION" => "Y",
-		"SLIDER" => "1",
-		"SLIDER_PROPERTY" => "",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"SUBTITLE" => "",
-		"TEMPLATE_THEME" => "blue",
-		"TITLE" => "Производители",
-		"TEXT_CENTER" => "1",
-		"USE_RATING" => "N",
-		"USE_SHARE" => "N"
-	),
-	false
-);
-				?>
+				"bitrix:news.list",
+				"brands-list-seonik",
+				array(
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",
+					"ADD_SECTIONS_CHAIN" => "N",
+					"AJAX_MODE" => "N",
+					"AJAX_OPTION_ADDITIONAL" => "",
+					"AJAX_OPTION_HISTORY" => "N",
+					"AJAX_OPTION_JUMP" => "N",
+					"AJAX_OPTION_STYLE" => "Y",
+					"CACHE_FILTER" => "N",
+					"CACHE_GROUPS" => "N",
+					"CACHE_TIME" => "36000000",
+					"CACHE_TYPE" => "A",
+					"CHECK_DATES" => "Y",
+					"COMPONENT_TEMPLATE" => "brands-list-seonik",
+					"DETAIL_URL" => "",
+					"DISPLAY_BOTTOM_PAGER" => "N",
+					"DISPLAY_DATE" => "Y",
+					"DISPLAY_NAME" => "Y",
+					"DISPLAY_PICTURE" => "Y",
+					"DISPLAY_PREVIEW_TEXT" => "Y",
+					"DISPLAY_TOP_PAGER" => "N",
+					"FIELD_CODE" => array(
+						0 => "NAME",
+						1 => "PREVIEW_TEXT",
+						2 => "PREVIEW_PICTURE",
+						3 => "",
+					),
+					"FILTER_NAME" => "arRegionLinkFront",
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+					"IBLOCK_ID" => "27",
+					"IBLOCK_TYPE" => "-",
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+					"INCLUDE_SUBSECTIONS" => "Y",
+					"ITEMS_OFFSET" => "N",
+					"MEDIA_PROPERTY" => "",
+					"MESSAGE_404" => "",
+					"NEWS_COUNT" => "10",
+					"PAGER_BASE_LINK_ENABLE" => "N",
+					"PAGER_DESC_NUMBERING" => "N",
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+					"PAGER_SHOW_ALL" => "Y",
+					"PAGER_SHOW_ALWAYS" => "N",
+					"PAGER_TEMPLATE" => ".default",
+					"PAGER_TITLE" => "Новости",
+					"PARENT_SECTION" => "",
+					"PARENT_SECTION_CODE" => "",
+					"PREVIEW_TRUNCATE_LEN" => "",
+					"PROPERTY_CODE" => array(
+						0 => "",
+						1 => "",
+					),
+					"RIGHT_LINK" => "/company/brands/",
+					"RIGHT_TITLE" => "Все производители",
+					"SEARCH_PAGE" => "/search/",
+					"SET_BROWSER_TITLE" => "N",
+					"SET_LAST_MODIFIED" => "N",
+					"SET_META_DESCRIPTION" => "N",
+					"SET_META_KEYWORDS" => "N",
+					"SET_STATUS_404" => "N",
+					"SET_TITLE" => "N",
+					"SHOW_404" => "N",
+					"SHOW_DETAIL_LINK" => "Y",
+					"SHOW_PREVIEW_TEXT" => "Y",
+					"SHOW_SECTION" => "Y",
+					"SLIDER" => "1",
+					"SLIDER_PROPERTY" => "",
+					"SORT_BY1" => "ACTIVE_FROM",
+					"SORT_BY2" => "SORT",
+					"SORT_ORDER1" => "DESC",
+					"SORT_ORDER2" => "ASC",
+					"STRICT_SECTION_CHECK" => "N",
+					"SUBTITLE" => "",
+					"TEMPLATE_THEME" => "blue",
+					"TITLE" => "Производители",
+					"TEXT_CENTER" => "1",
+					"USE_RATING" => "N",
+					"USE_SHARE" => "N"
+				),
+				false
+				);?>
 
 			<? } ?>
-			
-			<?/* end Блок производителей на главной странице каталога */?>
-		</div> <!-- end catalog__block -->
+			</div> <!-- end catalog__block -->
+			<?// end Блок производителей на главной странице каталога ?>
 
-
-			<? // Блок "Вам будет интересно" ?> 
+			<?// Блок "Вам будет интересно" ?>
 			<div class="catalog__block">
 
 			<?
 				// id инфоблока, в которых будем выводить статьи
 				$IBLOCK_ID = 43;
-		
+
 				// Получаем массив id-шников элементов, выбранных в пользовательском поле "Статьи в каталоге" в конкретном разделе
 				$rsSelectedItems = CIBlockSection::GetList(
 				["SORT"=>"ASC"],
@@ -196,97 +191,92 @@ $APPLICATION->SetPageProperty('MENU', 'N');
 				["UF_ARTICLES_IN_CATALOG"],
 				);
 
-					$arSelectedIDs = $arSelectedArticles["UF_ARTICLES_IN_CATALOG"];
-
-
+				$arSelectedIDs = $arSelectedArticles["UF_ARTICLES_IN_CATALOG"];
 
 				if(!empty($arSelectedIDs)){
 					print_r($arSelectedIDs);
 					$GLOBALS["arArticlesByFilter"] = array("ID"=>$arSelectedIDs);
-			
-
-				} /*end if*/ ?>
+				}
+			?>
 
 			<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"blog-list-seonik", 
-	array(
-		"ACTIVE_DATE_FORMAT" => "j F Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "Y",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => "blog-list-seonik",
-		"DETAIL_URL" => "/articles/#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
-		"DISPLAY_BOTTOM_PAGER" => "N",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "NAME",
-			1 => "PREVIEW_TEXT",
-			2 => "PREVIEW_PICTURE",
-			3 => "DATE_ACTIVE_FROM",
-			4 => "",
-		),
-		"FILTER_NAME" => "arArticlesByFilter",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "37",
-		"IBLOCK_TYPE" => "aspro_allcorp3_content",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "3",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => "ajax",
-		"PAGER_TITLE" => "",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "REDIRECT",
-			1 => "PERIOD",
-			2 => "SALE_NUMBER",
-			3 => "",
-		),
-		"RIGHT_LINK" => "/articles/",
-		"RIGHT_TITLE" => "Все статьи",
-		"SET_BROWSER_TITLE" => "N",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "N",
-		"SET_META_KEYWORDS" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"SHOW_PREVIEW_TEXT" => "Y",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"SUBTITLE" => "",
-		"TITLE" => "Вам будет интересно",
-		"USE_FILTER" => "Y"
-	),
-	false
-);?>
-
-</div> <!-- end catalog__block -->
-
-			<? // end Блок "Вам будет интересно" ?>
+				"bitrix:news.list", 
+				"blog-list-seonik", 
+				array(
+					"ACTIVE_DATE_FORMAT" => "j F Y",
+					"ADD_SECTIONS_CHAIN" => "Y",
+					"AJAX_MODE" => "N",
+					"AJAX_OPTION_ADDITIONAL" => "",
+					"AJAX_OPTION_HISTORY" => "N",
+					"AJAX_OPTION_JUMP" => "N",
+					"AJAX_OPTION_STYLE" => "Y",
+					"CACHE_FILTER" => "Y",
+					"CACHE_GROUPS" => "Y",
+					"CACHE_TIME" => "36000000",
+					"CACHE_TYPE" => "A",
+					"CHECK_DATES" => "Y",
+					"COMPONENT_TEMPLATE" => "blog-list-seonik",
+					"DETAIL_URL" => "/articles/#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
+					"DISPLAY_BOTTOM_PAGER" => "N",
+					"DISPLAY_DATE" => "Y",
+					"DISPLAY_NAME" => "Y",
+					"DISPLAY_PICTURE" => "Y",
+					"DISPLAY_PREVIEW_TEXT" => "Y",
+					"DISPLAY_TOP_PAGER" => "N",
+					"FIELD_CODE" => array(
+						0 => "NAME",
+						1 => "PREVIEW_TEXT",
+						2 => "PREVIEW_PICTURE",
+						3 => "DATE_ACTIVE_FROM",
+						4 => "",
+					),
+					"FILTER_NAME" => "arArticlesByFilter",
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+					"IBLOCK_ID" => "37",
+					"IBLOCK_TYPE" => "aspro_allcorp3_content",
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+					"INCLUDE_SUBSECTIONS" => "Y",
+					"MESSAGE_404" => "",
+					"NEWS_COUNT" => "3",
+					"PAGER_BASE_LINK_ENABLE" => "N",
+					"PAGER_DESC_NUMBERING" => "N",
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+					"PAGER_SHOW_ALL" => "N",
+					"PAGER_SHOW_ALWAYS" => "N",
+					"PAGER_TEMPLATE" => "ajax",
+					"PAGER_TITLE" => "",
+					"PARENT_SECTION" => "",
+					"PARENT_SECTION_CODE" => "",
+					"PREVIEW_TRUNCATE_LEN" => "",
+					"PROPERTY_CODE" => array(
+						0 => "REDIRECT",
+						1 => "PERIOD",
+						2 => "SALE_NUMBER",
+						3 => "",
+					),
+					"RIGHT_LINK" => "/articles/",
+					"RIGHT_TITLE" => "Все статьи",
+					"SET_BROWSER_TITLE" => "N",
+					"SET_LAST_MODIFIED" => "N",
+					"SET_META_DESCRIPTION" => "N",
+					"SET_META_KEYWORDS" => "N",
+					"SET_STATUS_404" => "N",
+					"SET_TITLE" => "N",
+					"SHOW_404" => "N",
+					"SHOW_PREVIEW_TEXT" => "Y",
+					"SORT_BY1" => "ACTIVE_FROM",
+					"SORT_BY2" => "SORT",
+					"SORT_ORDER1" => "DESC",
+					"SORT_ORDER2" => "ASC",
+					"STRICT_SECTION_CHECK" => "N",
+					"SUBTITLE" => "",
+					"TITLE" => "Вам будет интересно",
+					"USE_FILTER" => "Y"
+				),
+				false
+			);?>
+		</div> <!-- end catalog__block -->
+		<?// end Блок "Вам будет интересно" ?>
 
 
 		<?// Блок "Вы также смотрели" ?>
