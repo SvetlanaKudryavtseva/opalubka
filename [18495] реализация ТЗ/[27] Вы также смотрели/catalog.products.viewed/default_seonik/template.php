@@ -62,6 +62,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 
 $arParams['~MESS_SHOW_TITLE'] = $arParams['~MESS_SHOW_TITLE'] ?: Loc::getMessage('CT_CPV_TPL_MESS_SHOW_TITLE');
 
+
 $arParams['~MESS_BTN_BUY'] = $arParams['~MESS_BTN_BUY'] ?: Loc::getMessage('CT_CPV_TPL_MESS_BTN_BUY');
 $arParams['~MESS_BTN_DETAIL'] = $arParams['~MESS_BTN_DETAIL'] ?: Loc::getMessage('CT_CPV_TPL_MESS_BTN_DETAIL');
 $arParams['~MESS_BTN_COMPARE'] = $arParams['~MESS_BTN_COMPARE'] ?: Loc::getMessage('CT_CPV_TPL_MESS_BTN_COMPARE');
@@ -118,8 +119,17 @@ $containerName = 'catalog-products-viewed-container';
 ?>
 
 <div class="catalog-products-viewed bx-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>">
+	<?
+	if($arResult['ITEMS'].length > 1){?><?}?>
 	<div class="inner-block__title-wrapper">
-		<div class="inner-block__part--left"><h2><?=$arParams['~MESS_SHOW_TITLE'];?></h2></div>
+		<div class="inner-block__part--left">
+		<h2>
+			<? if(sizeof($arResult['ITEMS']) > 1) {
+				print_r(sizeof($arResult['ITEMS']));
+				echo $arParams['~MESS_SHOW_TITLE'];
+			}?>
+			</h2>
+		</div>
 	</div>
 	<?
 	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
