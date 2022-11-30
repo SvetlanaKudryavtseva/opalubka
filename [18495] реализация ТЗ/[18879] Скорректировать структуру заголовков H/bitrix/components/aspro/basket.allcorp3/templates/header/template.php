@@ -143,8 +143,7 @@
 					<div class="basket_empty height-100" <?=(!$bEmptyBasket ? 'style="display:none"' : '');?>>
 						<div class="wrap">
 							<?=CAllcorp3::showIconSvg('basket', SITE_TEMPLATE_PATH."/images/svg/basket.svg");?>
-							<!--<h4 class="font_18"><?/*=GetMessage('T_BASKET_EMPTY_TITLE');*/?></h4>-->
-							<p class="font_18"><?=GetMessage('T_BASKET_EMPTY_TITLE');?></p>
+							<h4 class="font_18"><?=GetMessage('T_BASKET_EMPTY_TITLE');?></h4>
 							<div class="description color_666"><?=GetMessage('T_BASKET_EMPTY_DESCRIPTION');?></div>
 							<div class="button">
 								<a class="btn btn-default btn-transparent-border" href="<?=$catalogUrl?>">
