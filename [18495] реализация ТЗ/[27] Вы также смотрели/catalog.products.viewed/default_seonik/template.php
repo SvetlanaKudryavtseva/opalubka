@@ -123,7 +123,7 @@ $containerName = 'catalog-products-viewed-container';
 		<div class="inner-block__part--left">
 		<h2>
 			<? if(sizeof($arResult['ITEMS']) > 1) {
-				print_r(sizeof($arResult['ITEMS']));
+				/*print_r(sizeof($arResult['ITEMS']));*/
 				echo $arParams['~MESS_SHOW_TITLE'];
 			}?>
 			</h2>
