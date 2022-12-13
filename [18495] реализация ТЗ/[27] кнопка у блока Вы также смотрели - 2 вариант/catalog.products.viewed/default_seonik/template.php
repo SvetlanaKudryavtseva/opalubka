@@ -120,16 +120,16 @@ $containerName = 'catalog-products-viewed-container';
 ?>
 
 <div class="catalog-products-viewed bx-<?=$arParams['TEMPLATE_THEME']?>" data-entity="<?=$containerName?>">
-	<div class="inner-block__title-wrapper">
+	<!--<div class="inner-block__title-wrapper">
 		<div class="inner-block__part--left">
 			<h2>
-			<? if(sizeof($arResult['ITEMS']) > 1) {
-				/*print_r(sizeof($arResult['ITEMS']));*/
+			<?/* if(sizeof($arResult['ITEMS']) > 1) {
+				print_r(sizeof($arResult['ITEMS']));
 				echo $arParams['~MESS_SHOW_TITLE'];
-			}?>
+			}*/?>
 			</h2>
 		</div>
-	</div>
+	</div>-->
 	<?
 	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
 	{
@@ -458,12 +458,12 @@ $containerName = 'catalog-products-viewed-container';
 						?>
 						<div class="col-xs-12 product-item-small-card">
 							<div class="row">
-								<?
+								<?/*
 								foreach ($rowItems as $item)
 								{
-									?>
+									*/?>
 									<div class="col-xs-6 col-sm-4 col-md-2">
-										<?
+										<?/*
 										$APPLICATION->IncludeComponent(
 											'bitrix:catalog.item',
 											'',
@@ -483,11 +483,11 @@ $containerName = 'catalog-products-viewed-container';
 											$component,
 											array('HIDE_ICONS' => 'Y')
 										);
-										?>
+										*/?>
 									</div>
-									<?
+									<?/*
 								}
-								?>
+								*/?>
 							</div>
 						</div>
 						<?
